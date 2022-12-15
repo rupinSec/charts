@@ -1,9 +1,6 @@
 name: Lint and Test Charts
 
-on:
-  push:
-    paths:
-      - 'charts/**'
+on: push
 
 jobs:
   lint-chart:
