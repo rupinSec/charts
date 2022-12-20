@@ -1,3 +1,4 @@
+apiVersion: v2
 name: argo-workflow
 description: Chart to deploy argo-workflow
 version: 0.1.2
