@@ -4,8 +4,8 @@ metadata:
   name: workflow-controller
 spec:
   selector:
-    matchLabels:
-      app: workflow-controller
+  matchLabels:
+app: workflow-controller
   template:
     metadata:
       labels:
