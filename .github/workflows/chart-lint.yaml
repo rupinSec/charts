@@ -1,4 +1,4 @@
-name: Chart Validator - newapproach
+name: Chart Validator - NewApproach
 on: push
 jobs:
   chart-lint:
@@ -14,7 +14,7 @@ jobs:
         list-files: shell
         filters: |
           charts:
-            - added|modified: 'charts/*/templates/*'
+            - added|modified: 'charts/**/templates/**'
     - run: echo ${{ steps.filter.outputs.charts }}
     - uses: actions/setup-python@v2
     - uses: jannekem/run-python-script-action@v1
@@ -31,10 +31,6 @@ jobs:
       run: |
         printenv "SCRIPT_STDOUT"
         printenv "SCRIPT_STDERR"
-    - name: values-file
-      id: values
-      run: echo ./${{ steps.python.outputs.chart_path }}templates/values.yaml
-    - run: echo ${{ steps.values.outputs.values_files }}
     - name: helm-check
       uses: gunish-dt/helm-check-action@0.1.4
       env:

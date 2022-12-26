@@ -1,5 +1,5 @@
-#on: push
-name: Chart Validator -oldapproach
+on: push
+name: Chart Validator - Oldapproach
 jobs:
   chart-lint:
     runs-on: ubuntu-latest
