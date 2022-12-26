@@ -1,5 +1,3 @@
-#testing something
-#testing 5xd3ds
 apiVersion: apps/v1
 kind: Deployment
 metadata:
