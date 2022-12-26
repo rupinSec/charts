@@ -32,6 +32,6 @@ jobs:
         printenv "SCRIPT_STDERR"
     - name: values-file
       id: values
-      run: echo ./${{ steps.python.outputs.chart_path }}/values.yaml
+      run: echo ./${{ steps.python.outputs.chart_path }}templates/values.yaml
 
     
