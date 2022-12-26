@@ -1,7 +1,7 @@
 name: Chart Validator - NewApproach
 on: push
 jobs:
-  chart-lint:
+  helm-lint_and_helm-template:
     runs-on: ubuntu-latest
     outputs:
       charts: ${{ steps.filter.outputs.charts }}
