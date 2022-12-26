@@ -1,4 +1,4 @@
-name: Chart Validator
+name: Chart Validator - newapproach
 on: push
 jobs:
   chart-lint:
@@ -33,6 +33,7 @@ jobs:
     - name: values-file
       id: values
       run: echo ./${{ steps.python.outputs.chart_path }}templates/values.yaml
+    - run: echo ${{ steps.values.outputs.values_files }}
     - name: helm-check
       uses: gunish-dt/helm-check-action@0.1.4
       env:
